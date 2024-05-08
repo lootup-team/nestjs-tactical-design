@@ -1,5 +1,5 @@
 {
-  "name": "@gedai/tactical-design",
+  "name": "@gedai/nestjs-tactical-design",
   "version": "0.0.1",
   "description": "Domain Driven Design and CQRS abstractions for gedai project",
   "author": "gm50x",

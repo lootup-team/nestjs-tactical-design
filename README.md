@@ -5,7 +5,7 @@ Utilities package for working with Domain Driven Design and CQRS in NestJS. This
 ## Installation
 
 ```bash
-$ npm install @gedai/tactical-design
+$ npm install @gedai/nestjs-tactical-design
 ```
 
 ## Getting Started:
