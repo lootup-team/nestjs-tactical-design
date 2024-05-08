@@ -1,4 +1,4 @@
-import { ContextService } from '@gedai/core';
+import { ContextService } from '@gedai/nestjs-core';
 import { Inject, Injectable } from '@nestjs/common';
 import { TransactionStorageKeyToken } from './transaction-manager.token';
 

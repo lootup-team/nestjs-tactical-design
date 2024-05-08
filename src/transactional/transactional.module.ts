@@ -5,7 +5,7 @@ import {
 } from './transaction-manager.token';
 import { TransactionManager } from './transaction.manager';
 
-export type TransactionalModuleOptions = object;
+type TransactionalModuleOptions = object;
 export type TransactionalModuleExtraOptions = {
   isGlobal?: boolean;
   connectionName?: string;
@@ -14,9 +14,9 @@ export type TransactionalModuleExtraOptions = {
 };
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const { ConfigurableModuleClass, MODULE_OPTIONS_TOKEN } =
+const { ConfigurableModuleClass } =
   new ConfigurableModuleBuilder<TransactionalModuleOptions>()
-    .setClassMethodName('forRoot')
+    .setClassMethodName('forFeature')
     .setFactoryMethodName('createTransactionalOptions')
     .setExtras(null, (definitions, extras: TransactionalModuleExtraOptions) => {
       const { TransactionManagerAdapter, connectionName, databaseProvider } =
@@ -31,6 +31,11 @@ const { ConfigurableModuleClass, MODULE_OPTIONS_TOKEN } =
         providers: [
           ...(definitions.providers || []),
           {
+            /**
+             * TODO: by doing it this way, we probably can't have
+             * Two different transaction managers in the same module
+             * might collide
+             */
             provide: TransactionStorageKeyToken,
             useValue: TransactionManagerToken,
           },

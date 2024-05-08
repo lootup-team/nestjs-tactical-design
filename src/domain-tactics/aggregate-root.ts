@@ -1,5 +1,7 @@
 import { Constructor } from '@nestjs/cqrs';
-import { AggregateEvent } from './domain-event';
+import { AggregateEvent } from './aggregate-event';
+
+// TODO: it would be nice to have a .save method that would persist the entity
 
 export abstract class AggregateRoot {
   private readonly events: AggregateEvent[] = [];
@@ -14,7 +16,7 @@ export abstract class AggregateRoot {
   }
 
   /**
-   * Commits (publishes) all uncommitted events.
+   * Publishes all unpublished events to the event bus.
    * Must have been merged with the publisher context in order to work.
    */
   async commit(): Promise<void> {

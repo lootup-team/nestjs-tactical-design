@@ -1,12 +1,16 @@
 ## Description
 
-This package offers a set of functionality to help implementing DDD in NestJS Applications. It's tecnology agnostic and should be extended with your specific needs for concret implementation for data storage and event publishing. It also offer the Transactional decorator a clean two phase commit of database storage
+Utilities package for working with Domain Driven Design and CQRS in NestJS. This package offers abstractions and dedicated implementations need to be installed together.
 
 ## Installation
 
 ```bash
 $ npm install @gedai/tactical-design
 ```
+
+## Getting Started:
+
+TODO: WORK IN PROGRESS
 
 ## License
 
