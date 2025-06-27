@@ -1,6 +1,6 @@
 {
   "name": "@lootupteam/nestjs-tactical-design",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "Domain Driven Design and CQRS abstractions for gedai project",
   "author": "gm50x",
   "private": false,
