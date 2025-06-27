@@ -5,7 +5,7 @@ Utilities package for working with Domain Driven Design and CQRS in NestJS. This
 ## Installation
 
 ```bash
-$ npm install @gedai/nestjs-tactical-design
+$ npm install @lootupteam/nestjs-tactical-design
 ```
 
 ## Getting Started:
@@ -14,4 +14,4 @@ TODO: WORK IN PROGRESS
 
 ## License
 
-Gedai is [MIT licensed](LICENSE).
+@lootupteam/nestjs-tactical-design is [MIT licensed](LICENSE).
