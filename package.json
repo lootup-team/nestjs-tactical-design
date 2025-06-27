@@ -1,5 +1,5 @@
 {
-  "name": "@gedai/nestjs-tactical-design",
+  "name": "@lootupteam/nestjs-tactical-design",
   "version": "0.0.3",
   "description": "Domain Driven Design and CQRS abstractions for gedai project",
   "author": "gm50x",
@@ -10,12 +10,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gedai-dev/nestjs-tactical-design.git"
+    "url": "https://github.com/lootup-team/nestjs-tactical-design.git"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist",
+    "dist/**",
     "LICENSE",
     "package*.json"
   ],
