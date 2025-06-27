@@ -13,7 +13,6 @@ export type TransactionalModuleExtraOptions = {
   TransactionManagerAdapter: Type<TransactionManager>;
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const { ConfigurableModuleClass } =
   new ConfigurableModuleBuilder<TransactionalModuleOptions>()
     .setClassMethodName('forFeature')
