@@ -20,14 +20,14 @@ export interface Connection {
 }
 
 @Injectable()
-export abstract class TransactionManager {
+export abstract class TransactionManager<T = any> {
   @Inject(TransactionStorageKeyToken) private readonly key: string;
 
   constructor(protected readonly context: ContextService) {}
 
-  abstract createTransaction(): Promise<Transaction>;
+  abstract createTransaction(): Promise<Transaction<T>>;
 
-  getRunningTransactionOrDefault(): Transaction {
+  getRunningTransactionOrDefault(): Transaction<T> {
     return this.context.get(this.key);
   }
 
@@ -54,7 +54,7 @@ export abstract class TransactionManager {
   }
 
   private getRunningTransactionOrFail() {
-    const transaction = this.context.get<Transaction>(this.key);
+    const transaction = this.context.get<Transaction<T>>(this.key);
     if (!transaction) {
       throw new Error('Transaction is not running for the current context');
     }
